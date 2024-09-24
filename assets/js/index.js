@@ -354,7 +354,7 @@ function addSearchListeners() {
 
 async function init() {
   const loader = document.getElementById("loader");
-  loader.style.display = "block";  // Show the loader
+  loader.style.display = "block";  
 
   try {
     let todos = getTasksFromLocalStorage();
