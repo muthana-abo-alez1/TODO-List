@@ -353,6 +353,9 @@ function addSearchListeners() {
 }
 
 async function init() {
+  const loader = document.getElementById("loader");
+  loader.style.display = "block";  // Show the loader
+
   try {
     let todos = getTasksFromLocalStorage();
     if (todos.length === 0) {
@@ -363,6 +366,8 @@ async function init() {
     addSearchListeners();
   } catch (error) {
     console.error("Failed to initialize table:", error);
+  } finally {
+    loader.style.display = "none";  
   }
 }
 

@@ -34,6 +34,7 @@
   .footer .total-task {
     margin: var(--margin-auto);
     width: max-content;
+    margin-top: 50px;
   }
   .main .task-controls {
     margin: var(--margin-auto);
@@ -191,6 +192,26 @@
     display: block;
     font-weight: bold;
     font-size: var(--font-size-small);
+  }
+  .loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid var(--primary-color); 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   @media (min-width :1000px){
     .todo-table td button:hover, .add-task-form .add-task-btn:hover {
