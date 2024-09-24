@@ -148,7 +148,7 @@ export async function saveTaskEdit(row, taskId) {
     tasks[taskIndex].todo = editedTaskValue;
     tasks[taskIndex].userId = editedUserIdValue;
     tasks[taskIndex].completed = editedStatusValue;
-    
+
     setTasksToLocalStorage(tasks);
     try {
       const updatedTaskData = {
@@ -158,7 +158,6 @@ export async function saveTaskEdit(row, taskId) {
       };
       await updateTodo(taskId, updatedTaskData);
       console.log(`Task ID ${taskId} updated successfully!`);
-      
     } catch (error) {
       console.error(`Failed to update task ID ${taskId} on the server:`, error);
       alert("Failed to update the task on the server.");
@@ -354,7 +353,7 @@ function addSearchListeners() {
 
 async function init() {
   const loader = document.getElementById("loader");
-  loader.style.display = "block";  
+  loader.style.display = "block";
 
   try {
     let todos = getTasksFromLocalStorage();
@@ -367,7 +366,7 @@ async function init() {
   } catch (error) {
     console.error("Failed to initialize table:", error);
   } finally {
-    loader.style.display = "none";  
+    loader.style.display = "none";
   }
 }
 
