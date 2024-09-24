@@ -2,7 +2,8 @@
 
 ## Overview
 
-This is a simple TODO list application that allows users to manage their tasks efficiently. The application supports adding, deleting, and updating tasks, as well as searching and sorting functionalities. It stores tasks in local storage for persistence.
+This is a simple TODO list application that allows users to manage their tasks efficiently. The application supports adding, deleting, and updating tasks, as well as searching and sorting functionalities. It stores tasks in local storage for persistence.<br>
+[Visit the website](https://muthana-abo-alez1.github.io/TODO-List/)
 
 ## Features
 
