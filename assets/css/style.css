@@ -124,9 +124,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .todo-table td button:hover, .add-task-form .add-task-btn:hover {
-    background-color: var(--hover-color);
-  }
+  
   .task-action {
     display: flex;
     gap: 10px;
@@ -194,7 +192,11 @@
     font-weight: bold;
     font-size: var(--font-size-small);
   }
-  
+  @media (min-width :1000px){
+    .todo-table td button:hover, .add-task-form .add-task-btn:hover {
+      background-color: var(--hover-color);
+    }
+  }
   @media (max-width: 768px) {
     .todo-table-container {
       padding: 0;
