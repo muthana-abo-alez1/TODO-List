@@ -1,5 +1,7 @@
 const API_URL = 'https://dummyjson.com/todos';
-
+const getHeaders = () => ({
+    'Content-Type': 'application/json',
+  });
 export const fetchTodos = async () => {
     try {
         const response = await fetch(API_URL); 
@@ -16,9 +18,7 @@ export const addTodo = async (newTodo) => {
     try {
         const response = await fetch(`${API_URL}/add`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: getHeaders(),
             body: JSON.stringify(newTodo),
         });
         if (!response.ok) throw new Error('Failed to add todo');
@@ -33,9 +33,7 @@ export const updateTodo = async (id, updatedData) => {
     try {
         const response = await fetch(`${API_URL}/${id}`, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: getHeaders(),
             body: JSON.stringify(updatedData),
         });
         if (!response.ok) throw new Error('Failed to update todo');
