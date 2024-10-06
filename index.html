@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">TODO-List</h1>
+    </header>
+    <main class="main">
+      <div class="task-controls">
+        <form class="add-task-form">
+          <input
+            type="text"
+            class="add-task-input"
+            name="task"
+            placeholder="Add new Task ..."
+            required
+          />
+          <button type="submit" class="add-task-btn">Add</button>
+        </form>
+        <div class="multi-search-container">
+          <div class="main-search-div" id="main-search-div">
+            <span id="search-placeholder">Search Tasks . . .</span>
+          </div>
+
+          <div class="small-search-fields">
+            <div class="input-field">
+              <label for="search-id">ID:</label>
+              <input type="text" class="small-input" id="search-id" />
+            </div>
+            <div class="input-field">
+              <label for="search-task-info">Task Info:</label>
+              <input type="text" class="small-input" id="search-task-info" />
+            </div>
+            <div class="input-field">
+              <label for="search-user-id">User ID:</label>
+              <input type="number" class="small-input" id="search-user-id" />
+            </div>
+            <div class="input-field">
+              <label for="search-status">Status:</label>
+              <input type="text" class="small-input" id="search-status" />
+            </div>
+            <div class="input-field"></div>
+              <label for="search-priority">priority:</label>
+              <input type="text" class="small-input" id="search-priority" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="todo-table-container">
+        <table class="todo-table">
+          <thead>
+            <tr>
+              <th>ID <span class="sort-icon">&#8597;</span></th>
+              <th>TODO Description <span class="sort-icon">&#8597;</span></th>
+              <th>User ID <span class="sort-icon">&#8597;</span></th>
+              <th>Status <span class="sort-icon">&#8597;</span></th>
+              <th>priority <span class="sort-icon">&#8597;</span></th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="todo-body">
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer class="footer">
+      <div>
+        <div id="loader" class="loader"></div>
+        <p class="total-task">Total tasks: <span id="task-count"></span></p>
+      </div>
+    </footer>
+  </body>
+</html>
